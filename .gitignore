@@ -128,4 +128,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+.env*
 liked_tweets.json
+tweet_likes_html/
