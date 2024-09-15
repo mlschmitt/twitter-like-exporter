@@ -12,6 +12,26 @@ class TweetParser():
         if not self.key_data.get("legacy", None):
             self.is_valid_tweet = False
 
+        if "content" not in raw_tweet_json:
+            print(f'raw_tweet_json=')
+            self.is_valid_tweet = False
+            return
+
+        if "itemContent" not in raw_tweet_json["content"]:
+            print(f'raw_tweet_json["content"]=')
+            self.is_valid_tweet = False
+            return
+
+        if "tweet_results" not in raw_tweet_json["content"]["itemContent"]:
+            print(f'raw_tweet_json["content"]["itemContent"]=')
+            self.is_valid_tweet = False
+            return
+
+        if "result" not in raw_tweet_json["content"]["itemContent"]["tweet_results"]:
+            print(f'raw_tweet_json["content"]["itemContent"]["tweet_results"]=')
+            self.is_valid_tweet = False
+            return
+
     def tweet_as_json(self):
         return {
             "tweet_id": self.tweet_id,
