@@ -1,5 +1,5 @@
 {
-    "USER_ID": "your_twitter_user_id",
+    "USER_ID": "NOT_your_twitter_handle_RATHER_your_twitter_user_id",
     "HEADER_AUTHORIZATION": "Bearer SOME_AUTH_TOKEN",
     "HEADER_COOKIES": "cookies_from_request",
     "HEADER_CSRF": "csrf_from_request",
